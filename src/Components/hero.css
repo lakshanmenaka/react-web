@@ -1,0 +1,178 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 720px;
+  background: #000;
+  overflow: hidden;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    #000 0%,
+    #050505 50%,
+    #111 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  min-height: 720px;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  padding: 80px 40px;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  width: 100%;
+}
+
+.hero-label {
+  margin: 0 0 18px;
+  color: #777;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.hero-inner h1 {
+  margin: 0;
+  max-width: 900px;
+
+  color: #fff;
+
+  font-size: clamp(48px, 7vw, 90px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.hero-inner h1 span {
+  display: block;
+}
+
+.hero-description {
+  max-width: 550px;
+  margin-top: 25px;
+
+  color: #888;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Button overlap */
+.hero-button {
+  position: absolute;
+
+  right: 40px;
+  bottom: -28px;
+
+  z-index: 10;
+
+  padding: 18px 35px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: #fff;
+  color: #000;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-4px);
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-content {
+    min-height: 650px;
+    padding: 60px 32px;
+  }
+
+  .hero-button {
+    right: 32px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    min-height: 600px;
+    padding: 40px 22px;
+    align-items: center;
+  }
+
+  .hero-inner h1 {
+    font-size: clamp(40px, 11vw, 58px);
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-button {
+    right: 22px;
+    bottom: -25px;
+
+    padding: 15px 28px;
+  }
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero-content {
+    min-height: 560px;
+    padding: 30px 18px;
+  }
+
+  .hero-inner h1 {
+    font-size: 39px;
+  }
+
+  .hero-button {
+    left: 18px;
+    right: 18px;
+    bottom: -25px;
+
+    width: calc(100% - 36px);
+  }
+}
